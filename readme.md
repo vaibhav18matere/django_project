@@ -10,3 +10,7 @@ django-admin startproject myproject
 cd myproject
 python manage.py runserver
 ```
+
+- Templates
+- Jinja
+- Django apps
