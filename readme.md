@@ -14,3 +14,5 @@ python manage.py runserver
 - Templates
 - Jinja
 - Django apps
+- Migrate
+- Admin Panel
