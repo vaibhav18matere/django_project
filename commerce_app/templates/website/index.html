@@ -1,4 +1,13 @@
-{% load static %}
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Welcome to the Commerce App - Layout Inheritance</h1>
+    <p>This is the home page of the Commerce App - Layout Inheritance</p>
+</div>
+{% endblock %}
+
+{% comment %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,4 +22,4 @@
     <p>This is the home page of the Commerce App</p>
     </div>
 </body>
-</html>
+</html> {% endcomment %}
