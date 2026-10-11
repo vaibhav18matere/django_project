@@ -1,3 +1,4 @@
+{% load static tailwind_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Commerce App{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% tailwind_css %}
 </head>
 <body>
-    <nav>This is the navigation bar</nav>
+    <nav class="bg-blue-500 text-white p-4 text-3xl">This is the navigation bar</nav>
     {% block content %} {% endblock %}
+    <footer class="bg-gray-500 text-white p-4">This is the footer</footer>
 </body>
 </html>
