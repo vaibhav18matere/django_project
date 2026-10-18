@@ -1,6 +1,20 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<h1>Chai Stores</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" 
+    type="submit">Search Chai Variety</button>
+</form>
+{% if stores %}
+<h2>Stores : </h2>
+{% for store in stores %}
+<p style="font-size: 1.2rem; font-weight: bold;">{{ store.name }}</p>
+<p style="font-size: 1rem; color: #666;">{{ store.location }}</p>
+{% endfor %}
+{% else %}
+<p>No stores found</p>
+{% endif %}
 {% endblock %}
 
