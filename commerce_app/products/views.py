@@ -8,3 +8,6 @@ def all_products(request):
 def chai_detail(request, chai_id):
     chai = get_object_or_404(ChaiVariety, pk=chai_id)
     return render(request, 'products/chai_details.html', {'chai': chai})
+
+def chai_store_view(request):
+    return render(request, 'products/chai_stores.html')
